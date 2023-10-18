@@ -51,6 +51,7 @@ typedef struct StackNode
 } StackNode;
 void stack_pall(stack_t **head, unsigned int line);
 void stack_push(stack_t **head, unsigned int line);
+void print_top(stack_t **top, unsigned int line);
 int check_digit(char *str);
 void add_node(stack_t **stack, int n);
 #endif
