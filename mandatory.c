@@ -15,8 +15,6 @@ void stack_pall(stack_t **head, unsigned int line)
 		temp = temp->next;
 	}
 }
-#include "monty.h"
-
 /**
  * stack_push - Pushes an integer value onto the stack.
  * @stack: A pointer to a pointer to the top of the stack.

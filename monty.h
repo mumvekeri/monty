@@ -39,16 +39,7 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-/**
- * struct StackNode - A structure for a stack node
- * @n: Integer value to be stored in the node
- * @next: Pointer to the next node in the stack
- */
-typedef struct StackNode
-{
-        int n;
-        struct StackNode *next;
-} StackNode;
+
 void stack_pall(stack_t **head, unsigned int line);
 void stack_push(stack_t **stack, int value, unsigned int line_number);
 void print_top(stack_t **top, unsigned int line);
