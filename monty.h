@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -8,6 +9,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+#include <sys/stat.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -47,10 +49,8 @@ typedef struct StackNode
         int n;
         struct StackNode *next;
 } StackNode;
-
-StackNode *stack = NULL;
-void pall(stack_t **stack, unsigned int line_number);
-void push(stack_t **stack, unsigned int line_number);
+void stack_pall(stack_t **head, unsigned int line);
+void stack_push(stack_t **head, unsigned int line);
 int check_digit(char *str);
 void add_node(stack_t **stack, int n);
 #endif
