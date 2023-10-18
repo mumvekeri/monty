@@ -15,3 +15,33 @@ void stack_pall(stack_t **head, unsigned int line)
 		temp = temp->next;
 	}
 }
+#include "monty.h"
+
+/**
+ * stack_push - Pushes an integer value onto the stack.
+ * @stack: A pointer to a pointer to the top of the stack.
+ * @value: The integer value to be pushed.
+ * @line_number: The line number in the file.
+ */
+void stack_push(stack_t **stack, int value, unsigned int line_number)
+{
+	stack_t *new_node;
+
+	(void)line_number;
+
+	new_node = malloc(sizeof(stack_t));
+
+	if (!new_node)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+	new_node->n = value;
+	new_node->prev = NULL;
+	new_node->next = *stack;
+
+	if (*stack)
+		(*stack)->prev = new_node;
+	*stack = new_node;
+}
+
