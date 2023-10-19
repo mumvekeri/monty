@@ -68,7 +68,7 @@ int _isdigit(int c);
 void execute(char *file);
 void (*find_opcode(void))(stack_t **, unsigned int);
 void pall(stack_t **stack, unsigned int line_number);
-void nop(stack_t **stack, unsigned int line_number);
+void stack_nop(stack_t **stack, unsigned int line);
 void pint(stack_t **stack, unsigned int line_number);
 void add_node(stack_t **top, unsigned int line_num);
 extern int atoi (const char *__nptr);
