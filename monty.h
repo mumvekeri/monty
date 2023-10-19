@@ -62,6 +62,7 @@ void stack_sub(stack_t **stack, unsigned int line);
 void stack_div(stack_t **stack, unsigned int line);
 void stack_mul(stack_t **stack, unsigned int line);
 void stack_mod(stack_t **stack, unsigned int line);
+void stack_add(stack_t **stack, unsigned int line);
 void stack_swap(stack_t **stack, unsigned int line);
 void *_calloc(unsigned int nmemb, unsigned int size);
 void clear_stack(stack_t *top);
