@@ -7,10 +7,10 @@
  */
 void print_top(stack_t **top, unsigned int line)
 {
-	if (top == NULL)
+	if (!*top || !top)
 	{
-		fprintf(stderr, "L%d: can't print_top, stack empty\n", line);
+		fprintf(stderr, "L%i: can't print_top, stack empty\n", line);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", (*top)->n);
+	printf("%i\n", (*top)->n);
 }
