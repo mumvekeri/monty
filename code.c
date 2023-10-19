@@ -18,6 +18,7 @@ void (*find_opcode(void))(stack_t **, unsigned int)
 		{"nop", stack_nop},
 		{"pint", pint},
 		{"#", comment},
+		{"pchar", pchar},
 		{"add", stack_add},
 		{"sub", stack_sub},
 		{"div", stack_div},

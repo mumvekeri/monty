@@ -41,7 +41,6 @@ typedef struct instruction_s
 } instruction_t;
 void stack_pall(stack_t **head, unsigned int line);
 void comment(stack_t **stack, unsigned int line);
-void stack_push(stack_t **stack, int value, unsigned int line_number);
 void print_top(stack_t **top, unsigned int line);
 void remove_top(stack_t **top, unsigned int line);
 int check_digit(char *str);
@@ -66,6 +65,7 @@ void stack_mod(stack_t **stack, unsigned int line);
 void stack_add(stack_t **stack, unsigned int line);
 void stack_swap(stack_t **stack, unsigned int line);
 void *_calloc(unsigned int nmemb, unsigned int size);
+void pchar(stack_t **stack, unsigned int line);
 void clear_stack(stack_t *top);
 int main(int argc, char *argv[]);
 int run_opcode(char *line_content, stack_t **stack_head, unsigned int line_num, FILE *monty_file);
