@@ -26,5 +26,5 @@ void rotl(stack_t **stack, unsigned int line_number)
 	head->next = tail;
 
 	/* update the stack pointer */
-	*stack = tail;
+	*stack = head;
 }
