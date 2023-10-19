@@ -39,7 +39,22 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
+/**
+ * struct bus_s - variables -args, file, line content
+ * @arg: value
+ * @file: pointer to monty file
+ * @content: line content
+ * @lifi: flag change stack <-> queue
+ * Description: carries values through the program
+ */
+typedef struct bus_s
+{
+	char *arg;
+	FILE *file;
+	char *content;
+	int lifi;
+}  bus_t;
+extern bus_t bus;
 void stack_pall(stack_t **head, unsigned int line);
 void stack_push(stack_t **stack, int value, unsigned int line_number);
 void print_top(stack_t **top, unsigned int line);
@@ -47,5 +62,6 @@ void remove_top(stack_t **top, unsigned int line);
 int check_digit(char *str);
 void exchange(stack_t **head, unsigned int line);
 int _isdigit(int c);
+void clear_stack(stack_t *top);
 void add_node(stack_t **stack, int n);
 #endif

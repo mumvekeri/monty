@@ -12,6 +12,7 @@ void remove_top(stack_t **top, unsigned int line)
 	if (*top == NULL)
 	{
 		fprintf(stderr, "L%d: can't remove_top, stack empty\n", line);
+		clear_stack(*top);
 		exit(EXIT_FAILURE);
 	}
 	temp = *top;
