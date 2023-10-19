@@ -45,7 +45,7 @@ void stack_push(stack_t **stack, int value, unsigned int line_number);
 void print_top(stack_t **top, unsigned int line);
 void remove_top(stack_t **top, unsigned int line);
 int check_digit(char *str);
-
+void exchange(stack_t **head, unsigned int line);
 int _isdigit(int c);
 void add_node(stack_t **stack, int n);
 #endif
