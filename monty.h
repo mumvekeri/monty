@@ -41,6 +41,7 @@ typedef struct instruction_s
 } instruction_t;
 void stack_pall(stack_t **head, unsigned int line);
 void comment(stack_t **stack, unsigned int line);
+void pstr(stack_t **stack, unsigned int line);
 void print_top(stack_t **top, unsigned int line);
 void remove_top(stack_t **top, unsigned int line);
 int check_digit(char *str);
