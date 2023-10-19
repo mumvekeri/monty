@@ -11,6 +11,9 @@ void (*find_opcode(void))(stack_t **, unsigned int)
 	int opcode_length;
 
 	instruction_t opcodes[] = {
+		{"swap", exchange},
+		{"pop", remove_top},
+		{"pall", pall},	
 		{NULL, NULL}
 	};
 	/* We check the opcode */
