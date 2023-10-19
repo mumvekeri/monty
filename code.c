@@ -19,6 +19,7 @@ void (*find_opcode(void))(stack_t **, unsigned int)
 		{"pint", print_top},
 		{"add", sum_top},
 		{"sub", stack_sub},
+		{"div", stack_div},
 		{NULL, NULL}
 	};
 	/* We check the opcode */

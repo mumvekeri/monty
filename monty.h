@@ -59,6 +59,7 @@ void sum_top(stack_t **s, unsigned int ln);
 int _atoi(char *str, unsigned int line_number);
 char **_split(char *str, char *s);
 void stack_sub(stack_t **stack, unsigned int line);
+void stack_div(stack_t **stack, unsigned int line);
 void *_calloc(unsigned int nmemb, unsigned int size);
 void clear_stack(stack_t *top);
 int main(int argc, char *argv[]);
