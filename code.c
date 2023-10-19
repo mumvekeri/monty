@@ -20,6 +20,7 @@ void (*find_opcode(void))(stack_t **, unsigned int)
 		{"add", sum_top},
 		{"sub", stack_sub},
 		{"div", stack_div},
+		{"mul", stack_mul},
 		{NULL, NULL}
 	};
 	/* We check the opcode */
