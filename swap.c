@@ -1,24 +1,29 @@
 #include "monty.h"
 
 /**
- * exchange - exchanges the top two elements of the stack
- * @head: double pointer to the head of the stack
- * @line: the number of the line being executed
+ * exchange - exchanges the top two nodes of the stack
+ * @nodes: pointer to the stack
+ * @line: file line number
+ * Return: void
  */
-void exchange(stack_t **head, unsigned int line)
-{
-	stack_t *temp;
 
-	/* check if the stack contains less than two elements */
-	if (!head || !*head || !(*head)->next)
+void exchange(stack_t **nodes, unsigned int line)
+{
+	stack_t *first = *nodes;
+	stack_t *second = *nodes;
+
+	if (!*nodes || !nodes || !first->next)
 	{
-		/* print the error message and exit with failure */
-		fprintf(stderr, "L%d: can't exchange, stack too short\n", line);
+		fprintf(stderr, "L%i: can't exchange, stack too short\n", line);
 		exit(EXIT_FAILURE);
 	}
-	/* exchange the top two elements of the stack */
-	temp = (*head)->next;
-	(*head)->next = temp->next;
-	temp->next = *head;
-	*head = temp;
+
+	first = first->next;
+	first->prev = NULL;
+
+	second->next = first->next;
+	first->next = second;
+	(first->next)->prev = first;
+
+	*nodes = first;
 }

@@ -2,26 +2,28 @@
 
 /**
  * remove_top - removes the top element of the stack
- * @top: pointer to the top of the stack
+ * @stack: pointer to the top of the stack
  * @line: line number of the opcode
  */
-void remove_top(stack_t **top, unsigned int line)
+void remove_top(stack_t **stack, unsigned int line)
 {
-	stack_t *temp;
+	stack_t *temp = *stack;
 
-	if (*top == NULL)
+	if (!*stack || !stack)
 	{
-		fprintf(stderr, "L%d: can't remove_top, stack empty\n", line);
-		clear_stack(*top);
+		fprintf(stderr, "L%i: can't pop an empty stack\n", line);
 		exit(EXIT_FAILURE);
 	}
-	temp = *top;
 
-	*top = (*top)->next;
-
-	if (*top != NULL)
+	if ((*stack)->next)
 	{
-		(*top)->prev = NULL;
+		*stack = temp->next;
+		(*stack)->prev = NULL;
+		free(temp);
 	}
-	free(temp);
+	else
+	{
+		free(*stack);
+		*stack = NULL;
+	}
 }

@@ -10,7 +10,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <sys/stat.h>
-
+char *buff;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -61,9 +61,12 @@ void stack_push(stack_t **stack, int value, unsigned int line_number);
 void print_top(stack_t **top, unsigned int line);
 void remove_top(stack_t **top, unsigned int line);
 int check_digit(char *str);
-void exchange(stack_t **head, unsigned int line);
-int _isdigit(int c);
+void exchange(stack_t **nodes, unsigned int line);
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 
+int _isdigit(int c);
+void execute(char *file);
+void (*find_opcode(void))(stack_t **, unsigned int);
 void clear_stack(stack_t *top);
 int main(int argc, char *argv[]);
 void add_node(stack_t **stack, int n);
