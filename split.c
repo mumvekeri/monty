@@ -1,17 +1,17 @@
 #include "monty.h"
 /**
- * _split - split string
- * @str: string
- * @sep: separator
- * Return: divided str
+ * _split - a function to split strings
+ * @str: string to be splitted
+ * @s: string pointer
+ * Return: character
  */
 
-char **_split(char *str, char *sep)
+char **_split(char *str, char *s)
 {
-	char *aux, **split_str;
+	char *a, **split_str;
 	int i = 0;
 
-	aux = strtok(str, sep);
+	a = strtok(str, s);
 	split_str = (char **)_calloc(100, sizeof(char *));
 
 	if (!split_str)
@@ -21,10 +21,10 @@ char **_split(char *str, char *sep)
 		exit(EXIT_FAILURE);
 	}
 
-	while (aux)
+	while (a)
 	{
-		split_str[i] = aux;
-		aux = strtok(NULL, sep);
+		split_str[i] = a;
+		a = strtok(NULL, s);
 		i++;
 	}
 	return (split_str);

@@ -13,11 +13,12 @@ void (*find_opcode(void))(stack_t **, unsigned int)
 	instruction_t opcodes[] = {
 		{"swap", exchange},
 		{"pop", remove_top},
-		{"pall", pall},
+		{"pall", stack_pall},
 		{"push",  add_node},
 		{"nop", stack_nop},
 		{"pint", print_top},
 		{"add", sum_top},
+		{"sub", stack_sub},
 		{NULL, NULL}
 	};
 	/* We check the opcode */
