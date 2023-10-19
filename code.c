@@ -17,6 +17,7 @@ void (*find_opcode(void))(stack_t **, unsigned int)
 		{"push",  add_node},
 		{"nop", stack_nop},
 		{"pint", print_top},
+		{"add", sum_top},
 		{NULL, NULL}
 	};
 	/* We check the opcode */
