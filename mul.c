@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- * mul - multiplies the second top element of the
+ * stack_mul - multiplies the second top element of the
  * stack with the top element
  * @stack: nodes
- * @line_number: file line number
+ * @line: file line number
  */
 
 void stack_mul(stack_t **stack, unsigned int line)

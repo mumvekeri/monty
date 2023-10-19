@@ -1,5 +1,5 @@
 #include "monty.h"
-extern int atoi (const char *__nptr);
+extern int atoi(const char *__nptr);
 /**
  * add_node - adds a node at the top of the stack
  * @top: pointer to the top node of the stack

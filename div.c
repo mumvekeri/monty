@@ -12,7 +12,7 @@ void stack_div(stack_t **stack, unsigned int line)
 
 	if (!head || !head->next)
 	{
-		fprintf(stderr , "L%i: can't div, stack too short\n", line);
+		fprintf(stderr, "L%i: can't div, stack too short\n", line);
 		exit(EXIT_FAILURE);
 	}
 

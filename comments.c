@@ -3,7 +3,7 @@
 /**
  * comment - ignores the line if it starts with #
  * @stack: nodes
- * @line_number: file line number
+ * @line: file line number
  * Return: void
  */
 

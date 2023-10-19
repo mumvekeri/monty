@@ -1,16 +1,16 @@
 #include "monty.h"
 
 /**
- * _calloc - function that allocates memory for an array, using malloc
+ * _calloc - function that allocates memory for an array.
  * @nmemb: array
  * @size: size
- * Return: pointer or NULL
+ * Return: void.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int index = 0;
 	char *ptr = NULL;
+	unsigned int index = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);

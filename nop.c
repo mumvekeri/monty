@@ -8,6 +8,6 @@
 
 void stack_nop(stack_t **stack, unsigned int line)
 {
-        (void)stack;
-        (void)line;
+	(void)stack;
+	(void)line;
 }
