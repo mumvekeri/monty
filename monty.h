@@ -55,6 +55,7 @@ typedef struct bus_s
 	int lifi;
 }  bus_t;
 extern bus_t bus;
+
 void stack_pall(stack_t **head, unsigned int line);
 void stack_push(stack_t **stack, int value, unsigned int line_number);
 void print_top(stack_t **top, unsigned int line);
@@ -62,6 +63,9 @@ void remove_top(stack_t **top, unsigned int line);
 int check_digit(char *str);
 void exchange(stack_t **head, unsigned int line);
 int _isdigit(int c);
+
 void clear_stack(stack_t *top);
+int main(int argc, char *argv[]);
 void add_node(stack_t **stack, int n);
+int run_opcode(char *line_content, stack_t **stack_head, unsigned int line_num, FILE *monty_file);
 #endif
