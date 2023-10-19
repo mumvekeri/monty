@@ -20,6 +20,7 @@ void (*find_opcode(void))(stack_t **, unsigned int)
 		{"#", comment},
 		{"pchar", pchar},
 		{"pstr", pstr},
+		{"rotl", rotl},
 		{"add", stack_add},
 		{"sub", stack_sub},
 		{"div", stack_div},
