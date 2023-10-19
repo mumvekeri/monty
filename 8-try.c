@@ -20,15 +20,20 @@ void add_node(stack_t **top, unsigned int line_num)
 		exit(EXIT_FAILURE);
 	}
 	new = malloc(sizeof(stack_t));
-
 	if (!new)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		free(split_buffer);
 		exit(EXIT_FAILURE);
 	}
+	if (split_buffer[1] == NULL)
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", line_num);
+		free(split_buffer);
+		free(new);
+		exit(EXIT_FAILURE);
+	}
 	value = _atoi(split_buffer[1], line_num);
-
 	new->n = value;
 	new->prev = NULL;
 	new->next = *top;
@@ -38,4 +43,3 @@ void add_node(stack_t **top, unsigned int line_num)
 	*top = new;
 	free(split_buffer);
 }
-
