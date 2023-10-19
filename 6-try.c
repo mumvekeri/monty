@@ -11,7 +11,7 @@ void exchange(stack_t **nodes, unsigned int line)
 {
 	stack_t *first = *nodes;
 	stack_t *second;
-	
+
 	if (!first || !first->next)
 	{
 		fprintf(stderr, "L%i: can't exchange, stack too short\n", line);
@@ -26,7 +26,6 @@ void exchange(stack_t **nodes, unsigned int line)
 	second->prev = NULL;
 	second->next = first;
 	first->prev = second;
-	
 	*nodes = second;
 }
 
