@@ -70,8 +70,12 @@ void (*find_opcode(void))(stack_t **, unsigned int);
 void pall(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
+void add_node(stack_t **top, unsigned int line_num);
+extern int atoi (const char *__nptr);
+int _atoi(char *str, unsigned int line_number);
+char **_split(char *str, char *sep);
+void *_calloc(unsigned int nmemb, unsigned int size);
 void clear_stack(stack_t *top);
 int main(int argc, char *argv[]);
-void add_node(stack_t **stack, int n);
 int run_opcode(char *line_content, stack_t **stack_head, unsigned int line_num, FILE *monty_file);
 #endif

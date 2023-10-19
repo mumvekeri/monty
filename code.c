@@ -14,6 +14,7 @@ void (*find_opcode(void))(stack_t **, unsigned int)
 		{"swap", exchange},
 		{"pop", remove_top},
 		{"pall", pall},
+		{"push",  add_node},
 		{NULL, NULL}
 	};
 	/* We check the opcode */
